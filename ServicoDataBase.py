@@ -17,8 +17,10 @@ def insertManifestacao(con, manifestacao, tipo):
     sql = "INSERT INTO manifestacoes (manifestacao, tipos) VALUES (%s, %s)"
     valores = (manifestacao, tipo)
     cursor.execute(sql, valores)
-    cursor.close()
     con.commit()
+    
+    cursor.close()
+    
     
     
 def selectManifestacoes(con):
