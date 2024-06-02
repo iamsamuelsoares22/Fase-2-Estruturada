@@ -4,10 +4,6 @@ from ServicoDataBase import *
 
 def main():
     
-    #Função para limpar o banco de dados(uso de testes) - OBS: APENAS PARA USO DE TESTES, PARA NÃO ARMAZENAR OS DADOS DE TESTE
-    #truncateDataBase(con)
-    
-    #Contador de manifestações
     qtdManifestacoes = 0 
     
     while True:

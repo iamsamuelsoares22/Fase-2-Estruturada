@@ -68,16 +68,4 @@ def deleteManifestacao(con, codigo):
     cursor.close()
     
     
-    
-    
-#OBS: APENAS PARA USO DE TESTE
-''' -- Limpar banco de dados(uso para teste)    
-def truncateDataBase(con):
-    cursor = con.cursor()
-    sql = "TRUNCATE TABLE manifestacoes"
-    cursor.execute(sql)
-    con.commit()
-    
-    cursor.close()
-'''
         
