@@ -17,9 +17,7 @@ def insertManifestacao(con, manifestacao, tipo):
     cursor.execute(sql, valores)
     con.commit()
     
-    cursor.close()
-    
-    
+    cursor.close()   
     
 def selectManifestacoes(con):
     cursor = con.cursor()
@@ -64,6 +62,17 @@ def deleteManifestacao(con, codigo):
     con.commit()
     
     cursor.close()
+    
+def selectQtdManifestacoes(con):
+    cursor = con.cursor()
+    sql = "SELECT COUNT(*) FROM manifestacoes"
+    cursor.execute(sql)
+    qtdManifestacoes = cursor.fetchone()
+    
+    cursor.close()
+    
+    return qtdManifestacoes[0]
+
     
     
         
