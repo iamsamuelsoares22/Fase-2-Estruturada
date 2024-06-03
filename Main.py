@@ -4,6 +4,7 @@ from ServicoDataBase import *
 
 def main():
     
+    # -- Verifica a quatidade de manifestações e retorna um número int -- #
     qtdManifestacoes = (selectQtdManifestacoes(con)) 
     
     while True:
