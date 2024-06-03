@@ -1,8 +1,8 @@
 from ServicoDataBase import *
 
-
-
 def exibirManifestacoes(con, qtdManifestacoes):
+    
+    # --- Verificar se existe manifestações no banco de dados --- #
     if qtdManifestacoes != 0:
        selectManifestacoes(con)
     else:
@@ -10,6 +10,8 @@ def exibirManifestacoes(con, qtdManifestacoes):
         
         
 def exibirManifestacoestipo(con, qtdManifestacoes):
+    
+    # ------------------------ Verificar se existe manifestações no banco de dados ------------------------ #
     if qtdManifestacoes != 0:
         while True:
             print("\nQual é o tipo da manifestação que você deseja exibir: \n\n 1) Elogio \n 2) Sugestão \n 3) Reclamação")
@@ -37,6 +39,7 @@ def exibirManifestacoestipo(con, qtdManifestacoes):
         
         
 def criarManifestacoes(con):
+    
     # ------ Escolha do tipo da manifestação ------ #
     while True:
         print("\nQual é o tipo da sua manifestação: \n\n 1) Elogio \n 2) Sugestão \n 3) Reclamação")
@@ -67,11 +70,14 @@ def quantidadeManifestacoes(qtdManifestacoes):
     print("\nA quantidade de manifestações é " + str(qtdManifestacoes))
     
 def pesquisarManifestacao(con, qtdManifestacoes):
+    
+    # ------------------------ Verificar se existe manifestações no banco de dados ------------------------ #
     if qtdManifestacoes != 0:
         while True:
             codigo = int(input("\nDigite o código da manisfestação: "))
             manifestacao = selectManifestacaoID(con, str(codigo))
             
+            # --- Verificar se existe alguma manisfestação com esse código(id) --- #
             if len(manifestacao) != 0:
                 print(f"\nTodas as manifestações com o id '{codigo}':\n\n")
                 print(f"{'|Id':<5} {'|Manifestação':<30} {'|Tipo':<10}")
@@ -90,6 +96,8 @@ def pesquisarManifestacao(con, qtdManifestacoes):
         
     
 def excluirManifestacao(con, qtdManifestacoes):
+    
+    # ------------------------ Verificar se existe manifestações no banco de dados ------------------------ #
     if qtdManifestacoes != 0:
         while True:
             exibirManifestacoes(con, qtdManifestacoes) #Exibir lista para escolha de exclusão do usuario

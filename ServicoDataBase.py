@@ -5,8 +5,6 @@ from mysql.connector import Error
 def iniciarConexao(host, usuario, senha, banco):
     return mysql.connector.connect(host=host, user=usuario, password=senha, database=banco)
 
-    
-
 def encerrarConexao(con):
     con.close()
 
