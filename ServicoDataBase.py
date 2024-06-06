@@ -1,5 +1,4 @@
 import mysql.connector
-from mysql.connector import Error
 
 # ----------- Iniciar/Encerrar conexão ----------- #
 def iniciarConexao(host, usuario, senha, banco):
