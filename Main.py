@@ -12,28 +12,28 @@ def main():
 
         escolha = input("\n Digite sua escolha: ")
         
-        if escolha == 1:
+        if escolha == "1":
             exibirManifestacoes(con, qtdManifestacoes)
 
-        elif escolha == 2:
+        elif escolha == "2":
             exibirManifestacoestipo(con, qtdManifestacoes)
             
-        elif escolha == 3:
+        elif escolha == "3":
             qtdManifestacoes += 1
             criarManifestacoes(con)
 
-        elif escolha == 4:
+        elif escolha == "4":
             quantidadeManifestacoes(qtdManifestacoes)
 
-        elif escolha == 5:
+        elif escolha == "5":
             pesquisarManifestacao(con, qtdManifestacoes)
 
-        elif escolha == 6:
+        elif escolha == "6":
             confirmExcluir = excluirManifestacao(con, qtdManifestacoes)
             if confirmExcluir:
                 qtdManifestacoes -= 1
 
-        elif escolha == 7:
+        elif escolha == "7":
             break
 
         else:
