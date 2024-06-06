@@ -10,7 +10,7 @@ def main():
     while True:
         print("\nMenu: \n 1) - Listar das Manifestações \n 2) - Listar Manifestacoes por tipo \n 3) - Criar uma nova Manifestação \n 4) - Exibir quantidade de manifestações \n 5) - Pesquisar uma manifestação por código \n 6) - Excluir uma Manifestação pelo Código \n 7) - Sair do Sistema")
 
-        escolha = int(input("\n Digite sua escolha: "))
+        escolha = input("\n Digite sua escolha: ")
         
         if escolha == 1:
             exibirManifestacoes(con, qtdManifestacoes)
